@@ -1,3 +1,6 @@
 import pandas as pd
-data = pd.DataFrame({"Toán":[5], "Văn":[5], "TB":[5]})
-data.to_csv("data_diem.csv", index=False)
+data_diem = pd.read_csv("data_diem.csv")
+
+def sap_xep_tang_dan(data):
+    data_tang_dan = data.sort_values(by=['TB'])
+    return data_tang_dan
