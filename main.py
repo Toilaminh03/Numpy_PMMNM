@@ -291,25 +291,8 @@ def check_data_import(dataFrame):
         return False
     else:
         return True
-
-def sap_xep_tang_dan(data, column_name):
-    data_tang_dan = data.sort_values(by=[column_name])
-    return data_tang_dan
-def sap_xep_giam_dan(data, column_name):
-    data_giam_dan = data.sort_values(by=[column_name],ascending = False)
-    return data_giam_dan
-            
-def hoc_sinh_diem_TB_cao_nhat(data):
-    max_TB = np.max(data["TB"])
-    data_maxTB = data[data["TB"] == max_TB]
-    return data_maxTB 
-
-def hoc_sinh_diem_TB_thap_nhat(data):
-    min_TB = np.min(data["TB"])
-    data_minTB = data[data["TB"] == min_TB]
-    return data_minTB
-
-      
+    
+        
 if __name__ == "__main__":
     app = QApplication([])
     window = MainWindow()
